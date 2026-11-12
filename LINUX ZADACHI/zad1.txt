@@ -1,0 +1,78 @@
+vboxuser@ubuntu26:~/zad1$ ls
+vboxuser@ubuntu26:~/zad1$ mkdir Linux_Uroci
+vboxuser@ubuntu26:~/zad1$ cd Linux_Uroci
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ mkdir Teoria Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ ls
+Praktika  Teoria
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ touch komandi.txt uprajnenia.txt
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp uprajnenia.txt 
+cp: missing destination file operand after 'uprajnenia.txt'
+Try 'cp --help' for more information.
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ ls
+komandi.txt  uprajnenia.txt
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp uprajnenia.txt Praktica
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp uprajnenia.txt Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cd ..
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ cd Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ ls
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ cp uprajnenia.txt Teoria Praktika
+cp: target 'Praktika': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ cp uprajnenia.txt Teoria
+cp: cannot stat 'uprajnenia.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ cd ..
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp uprajnenia.txt Teoria
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ ls
+Praktika  Teoria  komandi.txt  uprajnenia.txt
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp uprajnenia.txt Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cd ..
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ cd Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ ls
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ cp uprajnenia.txt uprajnenia.txt
+cp: cannot stat 'uprajnenia.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ cd ..
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp uprajnenia.txt uprajneniaCopy.txt
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ mv uprajneniaCopy.txt Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ mv uprajneniaCopy.txt Praktika/
+mv: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ mv uprajneniaCopy.txt Documents/Linux_Uroci/Praktika
+mv: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ mv uprajneniaCopy.txt Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ mv uprajneniaCopy.txt Home/Documents/Linux_Uroci/Praktika
+mv: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/Documents/Linux_Uroci/Praktika
+cp: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajnenia.Copy.txt' ~/zad1/Linux_Uroci/Praktika
+cp: cannot stat 'uprajnenia.Copy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/zad1/Linux_Uroci/Praktika
+cp: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/zad1/Linux-Uroci/Teoria
+cp: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajnenia.Copy.txt' ~/zad1/Linux_Uroci/Teoria
+cp: cannot stat 'uprajnenia.Copy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/zad1/Linux_Uroci/Praktica
+cp: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/zad1/Linux_Uroci/Teoria
+cp: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/zad1/Linux_Uroci/Praktika
+cp: cannot stat 'uprajneniaCopy.txt': No such file or directory
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp uprajnenia.txt uprajneniaCopy.txt
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cp 'uprajneniaCopy.txt' ~/zad1/Linux_Uroci/Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Teoria$ cd ..
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ cd Praktika
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ ls
+uprajneniaCopy.txt
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ touch otgovori.txt
+vboxuser@ubuntu26:~/zad1/Linux_Uroci/Praktika$ cd ..
+vboxuser@ubuntu26:~/zad1/Linux_Uroci$ ls -R
+.:
+Praktika  Teoria
+
+./Praktika:
+otgovori.txt  uprajneniaCopy.txt
+
+./Teoria:
+komandi.txt  uprajnenia.txt  uprajneniaCopy.txt
+
